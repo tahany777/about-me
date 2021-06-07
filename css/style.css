@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1 {
+    font-size: 30px;
+    color: rgb(2, 2, 98);
+    text-align: center;
+    padding: 20px;
+}
+main {
+    margin-top: 30px;
+}
+main section  {
+    background-color: rgb(211, 245, 234);
+    margin: 20px;
+    padding: 10px;
+    line-height: 1.7;
+    font-size: 20px;
+    font-style: italic;
+    border-radius: 30px;
+}
+footer {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    color: rgb(2, 2, 98);
+}
