@@ -51,9 +51,9 @@ if (qFour === 'yes' || qFour === 'y') {
 let qFive = prompt('My favorite subject in High School is Maths ').toLocaleLowerCase();
 
 if (qFive === 'yes' || qFive === 'y') {
-  console.log('Incorrect Answer');
+  //console.log('Incorrect Answer');
 } else if (qFive === 'no' || qFive === 'n') {
-  console.log('Correct Answer My favorite subject was Biology not Maths');
+  //console.log('Correct Answer My favorite subject was Biology not Maths');
   alert('Correct Answer My favorite subject was Biology not Maths');
 } else {
   alert('please enter yes or no');
