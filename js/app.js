@@ -61,4 +61,4 @@ if (qFive === 'yes' || qFive === 'y') {
   alert('please enter yes or no');
 }
 
-
+alert(`Thank You ${ user } , For visit my website`);
