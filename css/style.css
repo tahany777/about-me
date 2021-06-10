@@ -2,17 +2,27 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+body {
+    background-color: #f7f4e64d;
+}
 h1 {
     font-size: 30px;
-    color: rgb(2, 2, 98);
+    color: #333;
     text-align: center;
     padding: 20px;
 }
 main {
     margin-top: 30px;
 }
+main section {
+    transition: all 0.8s ease-in-out;
+}
+main .about-me:hover {
+    transform: rotate(3deg);
+}
 main section:first-child {
-    background-color: rgb(211, 245, 234);
+    background-color: #8a8570;
+    color: #fff;
     margin: 20px;
     padding: 10px;
     line-height: 1.7;
@@ -33,7 +43,7 @@ ol, ul{
     list-style-type: decimal;
     width: 50%;
     position: relative;
-    left: 25%
+    left: 25%;
 }
 
 ol li, ul li{
@@ -41,17 +51,30 @@ ol li, ul li{
     margin: 10px;
     font-size: 18px;
     font-style: oblique;
+    border-radius: 15px;
 }
 ol li {
-    background-color: #ddf6f7;
+    background-color: #946f6d;
+    color: #fff;
+    transition: all 0.8s ease-in-out;
+   
+}
+ol li:hover {
+    transform: scale(1.1, 1.1);
 }
 ul li {
-    background-color: antiquewhite;
+    background-color: #cab69b;;
     padding: 10px;
+    transition: all 0.8s ease-in-out;   
+}
+ul li:hover {
+    transform: scale(1.1, 1.1);
 }
 footer {
     display: block;
     text-align: center;
     font-weight: 600;
-    color: rgb(2, 2, 98);
+    color: #333;
+    padding: 10px;
+    margin: 10px;
 }
