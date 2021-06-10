@@ -1,15 +1,17 @@
 
 'use strict';
-
-let userO = prompt('What\'s Your Name?');
 let counterGlobal = 0;
 
-alert(`Hi , ${userO} welcome to my website`);
+let userO;
 
+function welcomMsg() {
+  userO = prompt('What\'s Your Name?');
+  alert(`Hi , ${userO} welcome to my website`);
+}
+welcomMsg();
 
-let arrQuestion = ['Am I a good cook?', 'my favorite Social Media is Facebook ? ', 'Do I Have Pets ? ', 'Is My Best Book "The 5-am Club" ? ', 'My favorite subject in High School is Maths '];
-
-function userQuestion(arr) {
+function userQuestion() {
+  let arr = ['Am I a good cook?', 'my favorite Social Media is Facebook ? ', 'Do I Have Pets ? ', 'Is My Best Book "The 5-am Club" ? ', 'My favorite subject in High School is Maths '];
   for (let i = 0; i < arr.length; i++) {
     let userInput = prompt(arr[i]).toLowerCase();
     while (userInput !== 'yes' && userInput !== 'y' && userInput !== 'no' && userInput !== 'n') {
@@ -26,9 +28,9 @@ function userQuestion(arr) {
     }
   }
 }
-userQuestion(arrQuestion);
-/*
+userQuestion();
 
+/*
 let qOne = prompt('Am I a good cook?').toLowerCase();
 while (qOne !== '' || isNaN(qOne)) {
   if (qOne === 'yes' || qOne === 'y' || qOne === 'no' || qOne === 'n') {
@@ -106,12 +108,11 @@ if (qFive === 'yes' || qFive === 'y') {
 
 */
 // lab 03
-
-let user = prompt('Try To Guess the number from 1 to 7');
-let guessNum = Math.floor(Math.random() * 7) + 1;
-let counter = 0;
-let tryA = 0;
 function guessNumber() {
+  let user = prompt('Try To Guess the number from 1 to 7');
+  let guessNum = Math.floor(Math.random() * 7) + 1;
+  let counter = 0;
+  let tryA = 0;
   while (user === '' || isNaN(user) || user < 1 || user > 7) {
     user = prompt('Please Enter the number between 1 to 7');
   }
@@ -143,10 +144,10 @@ function guessNumber() {
 guessNumber();
 
 //array question
-let answer = ['china', 'united states', 'japan', 'united arab emirates', 'south korea', 'australia', 'canada', 'thailand', 'indonesia', 'singapore'];
-let guess = 0;
-let count = 0;
 function countryQuestion() {
+  let answer = ['china', 'united states', 'japan', 'united arab emirates', 'south korea', 'australia', 'canada', 'thailand', 'indonesia', 'singapore'];
+  let guess = 0;
+  let count = 0;
   while (guess < 6) {
     let userAnswer = prompt('guess One of countries with most Skyscrapers?').toLowerCase();
     while (userAnswer === '' || !isNaN(userAnswer)) {
@@ -171,5 +172,7 @@ function countryQuestion() {
 }
 
 countryQuestion();
+
 alert(`Your Score is ${counterGlobal} Out of 7`);
+
 alert(`Thank You ${userO} , For visit my website`);
