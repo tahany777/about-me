@@ -9,7 +9,8 @@ function welcomMsg(q) {
 function userQuestion() {
   let arr = ['Am I a good cook?', 'my favorite Social Media is Facebook ? ', 'Do I Have Pets ? ', 'Is My Best Book "The 5-am Club" ? ', 'My favorite subject in High School is Maths '];
   for (let i = 0; i < arr.length; i++) {
-    let userInput = prompt(arr[i]).toLowerCase();
+    let userInput = prompt(arr[i]);
+    userInput = userInput.toLowerCase();
     while (userInput !== 'yes' && userInput !== 'y' && userInput !== 'no' && userInput !== 'n') {
       userInput = prompt('please enter yes or no || y or n').toLowerCase();
     }
