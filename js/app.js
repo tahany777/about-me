@@ -1,15 +1,11 @@
 
 'use strict';
 let counterGlobal = 0;
-
 let userO;
-
-function welcomMsg() {
-  userO = prompt('What\'s Your Name?');
+function welcomMsg(q) {
+  userO = prompt(q);
   alert(`Hi , ${userO} welcome to my website`);
 }
-welcomMsg();
-
 function userQuestion() {
   let arr = ['Am I a good cook?', 'my favorite Social Media is Facebook ? ', 'Do I Have Pets ? ', 'Is My Best Book "The 5-am Club" ? ', 'My favorite subject in High School is Maths '];
   for (let i = 0; i < arr.length; i++) {
@@ -28,10 +24,8 @@ function userQuestion() {
     }
   }
 }
-userQuestion();
-
-function guessNumber() {
-  let user = prompt('Try To Guess the number from 1 to 7');
+function guessNumber(q) {
+  let user = prompt(q);
   let guessNum = Math.floor(Math.random() * 7) + 1;
   let counter = 0;
   let tryA = 0;
@@ -63,14 +57,12 @@ function guessNumber() {
     alert(`Sorry, You can't guess the number the number is ${guessNum}`);
   }
 }
-guessNumber();
-
-function countryQuestion() {
+function countryQuestion(q) {
   let answer = ['china', 'united states', 'japan', 'united arab emirates', 'south korea', 'australia', 'canada', 'thailand', 'indonesia', 'singapore'];
   let guess = 0;
   let count = 0;
   while (guess < 6) {
-    let userAnswer = prompt('guess One of countries with most Skyscrapers?').toLowerCase();
+    let userAnswer = prompt(q).toLowerCase();
     while (userAnswer === '' || !isNaN(userAnswer)) {
       userAnswer = prompt('Please Enter An Country Name?').toLowerCase();
     }
@@ -91,8 +83,17 @@ function countryQuestion() {
     }
   }
 }
-
-countryQuestion();
+for(let i = 0; i < 4; i++){
+  if(i === 0) {
+    welcomMsg('What\'s Your Name?');
+  } else if (i === 1) {
+    userQuestion();
+  } else if(i === 2) {
+    guessNumber('Try To Guess the number from 1 to 7');
+  } else {
+    countryQuestion('guess One of countries with most Skyscrapers?');
+  }
+}
 
 alert(`Your Score is ${counterGlobal} Out of 7`);
 
